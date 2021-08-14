@@ -30,6 +30,18 @@ test("third call was with the charizard pokemon", () => {
   expect(mockFetchPokemon.mock.results[2].value).toMatch(/charizard/);
 });
 
+test("The last call to the mock function was called with the specified args", () => {
+    expect(mockFetchPokemon).toHaveBeenLastCalledWith("charizard");
+});
+
+test("The mock function was called at least once with the specified args", () => {
+    expect(mockFetchPokemon).toHaveBeenCalledWith("pikachu");
+});
+
+test("The mock function was called at least once", () => {
+    expect(mockFetchPokemon).toHaveBeenCalled();
+});
+
 //testing the real fetchPokemon
 test("function return the correct pokemon data", async () => {
   const data = await fetchPokemon("ditto");
@@ -39,3 +51,5 @@ test("function return the correct pokemon data", async () => {
     baseExperience: 101,
   });
 });
+
+
