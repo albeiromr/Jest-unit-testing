@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 
 test("verifying pokemon´s first ability", () => {
-  return fetch("https://pokeapi.co/api/v2/pokemon/itto")
+  return fetch("https://pokeapi.co/api/v2/pokemon/ditto")
     .then((response) => response.json())
     .then((data) => {
       expect(data.abilities[0].ability).toEqual({

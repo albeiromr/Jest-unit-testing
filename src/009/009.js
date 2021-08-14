@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 
-const endpoint = "https://pokeapi.co/api/v2/pokemon/itto";
+const endpoint = "https://pokeapi.co/api/v2/pokemon/ditto";
 
 const getPokemon = async (endpoint) => {
   try {
@@ -8,7 +8,7 @@ const getPokemon = async (endpoint) => {
     const data = await request.json();
     return data;
   } catch (error) {
-    console.log(new Error(error));
+    //Do stuff
   };
 };
 
