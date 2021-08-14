@@ -9,8 +9,8 @@ const mockCallback = jest.fn(x => {return 42 + x});
 
 forEvery([0, 1, 2], mockCallback);
 
-console.log(mockCallback.mock.calls);
-console.log(mockCallback.mock.results);
+//printing in console the mockCallback calls results, kind off a repport
+console.log(mockCallback.mock);
 
 
 
